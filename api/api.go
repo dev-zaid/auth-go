@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/gofiber/fiber/v2"
 	authController "github.com/dev-zaid/auth-go/api/auth/controller"
+	"github.com/gofiber/fiber/v2"
 )
 
 func handleRoot(c *fiber.Ctx) error {
@@ -12,5 +12,5 @@ func handleRoot(c *fiber.Ctx) error {
 func SetupApp(app *fiber.App) {
 	api := app.Group("/api")
 	api.Get("/", handleRoot)
-	api.Post("/login", authController.loginUser)
+	api.Post("/login", authController.LoginUser)
 }
